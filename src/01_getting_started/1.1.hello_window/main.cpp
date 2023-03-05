@@ -11,10 +11,16 @@
 #include <imgui/imgui_impl_opengl3.h>
 #include <iostream>
 
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void progressInput(GLFWwindow* window);
+
 int main(void)
 {
     // glfw: initialize and configure
     glfwInit();
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     GLFWwindow* window = glfwCreateWindow(1920, 1200, "LearnOpenGL", NULL, NULL);
     if (window == NULL)
@@ -25,23 +31,33 @@ int main(void)
     }
     glfwMakeContextCurrent(window);
 
+    // glad init 
+
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
 
+    glViewport(0, 0, 1920, 1200);
+    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
     ImGui::CreateContext();     // Setup Dear ImGui context
     ImGui::StyleColorsDark();       // Setup Dear ImGui style
     ImGui_ImplGlfw_InitForOpenGL(window, true);     // Setup Platform/Renderer backends
-    ImGui_ImplOpenGL3_Init("#version 450");
+    ImGui_ImplOpenGL3_Init("#version 330");
 
-    bool show_demo_window = true;
+    ImGuiIO& io = ImGui::GetIO();
+    float scale = 2.0f;
+    io.FontGlobalScale = scale;
+
+    bool show_demo_window = false;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
     while (!glfwWindowShouldClose(window))
     {
+        progressInput(window);
         /* Render here */
 
         /* Swap front and back buffers */
@@ -85,7 +101,7 @@ int main(void)
                 show_another_window = false;
             ImGui::End();
         }
-        glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+        glClearColor(0.5f, 0.3f, 0.5f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         // Rendering
@@ -105,4 +121,15 @@ int main(void)
     glfwTerminate();
 
     return 0;
+}
+
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
+void progressInput(GLFWwindow* window) {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+        glfwSetWindowShouldClose(window, true);
+    }
 }

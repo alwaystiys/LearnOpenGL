@@ -14,6 +14,24 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void progressInput(GLFWwindow* window);
 
+
+
+const GLchar* vertexShaderSource = 
+"#version 330 core\n"
+"layout(location = 0) in vec3 aPos;\n"
+"void main()\n"
+"{\n"
+"    gl_Position  = vec4(aPos.x, aPos.y, aPos.z, 1.0f);\n"
+"}\0";
+
+const GLchar* fragmentShaderSource =
+"#version 330 core\n"
+"out vec4 FragColor;\n"
+"void main()\n"
+"{\n"
+"    FragColor  = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+"}\0";
+
 int main(void)
 {
     // glfw: initialize and configure
@@ -22,7 +40,7 @@ int main(void)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(1920, 1200, "LearnOpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "LearnOpenGL", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -39,7 +57,7 @@ int main(void)
         return -1;
     }
 
-    glViewport(0, 0, 1920, 1200);
+    glViewport(0, 0, 1280, 720);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     ImGui::CreateContext();     // Setup Dear ImGui context
@@ -48,12 +66,68 @@ int main(void)
     ImGui_ImplOpenGL3_Init("#version 330");
 
     ImGuiIO& io = ImGui::GetIO();
-    float scale = 2.0f;
+    float scale = 1.5f;
     io.FontGlobalScale = scale;
 
     bool show_demo_window = false;
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+
+    // load and compile shader into shader program
+    GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
+    glCompileShader(vertexShader);
+
+    GLint success;
+    GLchar infoLog[512];
+    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
+    if (!success) {
+        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
+    }
+
+    GLuint fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
+    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
+    glCompileShader(fragmentShader);
+
+    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
+    if (!success) {
+        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
+    }
+
+    GLuint shaderProgram = glCreateProgram();
+    glAttachShader(shaderProgram, vertexShader);
+    glAttachShader(shaderProgram, fragmentShader);
+    glLinkProgram(shaderProgram);
+    
+    glGetProgramiv(shaderProgram, GL_COMPILE_STATUS, &success);
+    if (!success) {
+        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
+        std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
+    }
+
+    glDeleteShader(vertexShader);
+    glDeleteShader(fragmentShader);
+
+
+    GLfloat vertices[] = {
+    -0.5f, -0.5f, 0.0f,
+    0.5f, -0.5f, 0.0f,
+    0.0f, 0.5f, 0.0f
+    };
+
+    // VAO & VBO
+    GLuint VBO, VAO;
+
+    glGenVertexArrays(1, &VAO);
+    glGenBuffers(1, &VBO);
+
+    glBindVertexArray(VAO);
+    glBindBuffer(GL_ARRAY_BUFFER, VBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+
 
     while (!glfwWindowShouldClose(window))
     {
@@ -117,6 +191,11 @@ int main(void)
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
+    //
+    glDeleteProgram(shaderProgram);
+
+
+    //
     glfwDestroyWindow(window);
     glfwTerminate();
 

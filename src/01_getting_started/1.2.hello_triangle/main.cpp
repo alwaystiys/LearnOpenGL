@@ -14,8 +14,6 @@
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void progressInput(GLFWwindow* window);
 
-
-
 const GLchar* vertexShaderSource = 
 "#version 330 core\n"
 "layout(location = 0) in vec3 aPos;\n"
@@ -40,7 +38,7 @@ int main(void)
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "LearnOpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1600, 900, "LearnOpenGL", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -57,7 +55,7 @@ int main(void)
         return -1;
     }
 
-    glViewport(0, 0, 1280, 720);
+    glViewport(0, 0, 1600, 900);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     ImGui::CreateContext();     // Setup Dear ImGui context
@@ -127,7 +125,11 @@ int main(void)
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GL_FLOAT), (void*)0);
+    glEnableVertexAttribArray(0);
 
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    glBindVertexArray(0);
 
     while (!glfwWindowShouldClose(window))
     {
@@ -175,12 +177,18 @@ int main(void)
                 show_another_window = false;
             ImGui::End();
         }
-        glClearColor(0.5f, 0.3f, 0.5f, 1.0f);
+        glClearColor(clear_color.x, clear_color.y, clear_color.z, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        // OpenGL
+        glUseProgram(shaderProgram);
+        glBindVertexArray(VAO);
+        glDrawArrays(GL_TRIANGLES, 0, 3);
 
         // Rendering
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -192,6 +200,9 @@ int main(void)
     ImGui::DestroyContext();
 
     //
+
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
     glDeleteProgram(shaderProgram);
 
 

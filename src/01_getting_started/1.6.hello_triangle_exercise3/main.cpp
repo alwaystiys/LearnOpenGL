@@ -63,6 +63,10 @@ int main(void)
         return -1;
     }
 
+    int nrAttributes;
+    glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &nrAttributes);
+    std::cout << "Maximum nr of vertex attributes supported: " << nrAttributes << std::endl;
+
     glViewport(0, 0, 1600, 900);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 

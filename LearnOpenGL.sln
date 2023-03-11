@@ -31,6 +31,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.5.shader_exercise2_move",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.6.shader_exercise3_position", "src\01_getting_started\2.6.shader_exercise3_position\2.6.shader_exercise3_position.vcxproj", "{9BC496A6-AE8A-4AC4-B5CF-70587C804B87}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.1.texture_triangle", "src\01_getting_started\3.1.texture_triangle\3.1.texture_triangle.vcxproj", "{C22FB065-03EB-48E7-B1EA-95E5385B57C4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.2.texture_triangle_indexed", "src\01_getting_started\3.2.texture_triangle_indexed\3.2.texture_triangle_indexed.vcxproj", "{F04224C4-7AE7-40D7-B659-540472187AFE}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\common_lib\common_lib.vcxitems*{05d43fa9-83ed-47f3-b032-05319e2f7f7d}*SharedItemsImports = 9
@@ -42,10 +46,12 @@ Global
 		src\common_lib\common_lib.vcxitems*{9bc496a6-ae8a-4ac4-b5cf-70587c804b87}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{a4a6a33b-c1e8-4b71-bc35-67190819c6fe}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{b8db824d-bb1e-4bf0-8618-35377501c6b2}*SharedItemsImports = 4
+		src\common_lib\common_lib.vcxitems*{c22fb065-03eb-48e7-b1ea-95e5385b57c4}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{c253e525-afba-46f3-95a7-42dfe603d3cd}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{e5a3083c-35b8-4ec6-aa3d-ce4185f0c368}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{e7364725-63e8-49ac-bba2-36e3d5ab8685}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{ed978585-608d-41e8-aa4e-93cfec62ee75}*SharedItemsImports = 4
+		src\common_lib\common_lib.vcxitems*{f04224c4-7ae7-40d7-b659-540472187afe}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{f533dc43-8927-4e8b-aafd-759b6017c1a3}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +165,22 @@ Global
 		{9BC496A6-AE8A-4AC4-B5CF-70587C804B87}.Release|x64.Build.0 = Release|x64
 		{9BC496A6-AE8A-4AC4-B5CF-70587C804B87}.Release|x86.ActiveCfg = Release|Win32
 		{9BC496A6-AE8A-4AC4-B5CF-70587C804B87}.Release|x86.Build.0 = Release|Win32
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Debug|x64.ActiveCfg = Debug|x64
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Debug|x64.Build.0 = Debug|x64
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Debug|x86.ActiveCfg = Debug|Win32
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Debug|x86.Build.0 = Debug|Win32
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Release|x64.ActiveCfg = Release|x64
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Release|x64.Build.0 = Release|x64
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Release|x86.ActiveCfg = Release|Win32
+		{C22FB065-03EB-48E7-B1EA-95E5385B57C4}.Release|x86.Build.0 = Release|Win32
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Debug|x64.ActiveCfg = Debug|x64
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Debug|x64.Build.0 = Debug|x64
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Debug|x86.ActiveCfg = Debug|Win32
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Debug|x86.Build.0 = Debug|Win32
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Release|x64.ActiveCfg = Release|x64
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Release|x64.Build.0 = Release|x64
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Release|x86.ActiveCfg = Release|Win32
+		{F04224C4-7AE7-40D7-B659-540472187AFE}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

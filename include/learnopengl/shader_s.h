@@ -36,8 +36,6 @@ public:
 
 			vertexCode = vShaderStream.str();
 			fragmentCode = fShaderStream.str();
-			std::cout << vertexCode;
-			std::cout << fragmentCode;
 
 		}
 		catch (std::ifstream::failure& e)

@@ -57,7 +57,7 @@ int main(void)
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
-    Shader shaderProgram("2.3.shader.vs", "2.3.shader.fs");
+    Shader shaderProgram("2.4.exercise1_shader.vs", "2.4.exercise1_shader.fs");
 
 
     GLfloat vertices[] = {

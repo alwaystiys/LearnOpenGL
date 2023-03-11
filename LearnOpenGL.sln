@@ -21,17 +21,23 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.6.hello_triangle_exercise
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.1.shader_uniform", "src\01_getting_started\2.1.shader_uniform\2.1.shader_uniform.vcxproj", "{23DD662A-C724-4E8A-A751-A57049E4E30E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.2.shader_color", "src\01_getting_started\2.2.shader_color\2.2.shader_color.vcxproj", "{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.3.shader_class", "src\01_getting_started\2.3.shader_class\2.3.shader_class.vcxproj", "{ED978585-608D-41E8-AA4E-93CFEC62EE75}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\common_lib\common_lib.vcxitems*{05d43fa9-83ed-47f3-b032-05319e2f7f7d}*SharedItemsImports = 9
 		src\common_lib\common_lib.vcxitems*{23dd662a-c724-4e8a-a751-a57049e4e30e}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{3bc073c6-6cde-45ee-b709-9cf62f8da7f1}*SharedItemsImports = 4
+		src\common_lib\common_lib.vcxitems*{77dbc79b-1ac8-49f2-8e9a-2a3d42ef1f26}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{784f33e8-1e68-4c55-9a5c-1eb789325a7e}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{a4a6a33b-c1e8-4b71-bc35-67190819c6fe}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{b8db824d-bb1e-4bf0-8618-35377501c6b2}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{c253e525-afba-46f3-95a7-42dfe603d3cd}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{e5a3083c-35b8-4ec6-aa3d-ce4185f0c368}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{e7364725-63e8-49ac-bba2-36e3d5ab8685}*SharedItemsImports = 4
+		src\common_lib\common_lib.vcxitems*{ed978585-608d-41e8-aa4e-93cfec62ee75}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -104,6 +110,22 @@ Global
 		{23DD662A-C724-4E8A-A751-A57049E4E30E}.Release|x64.Build.0 = Release|x64
 		{23DD662A-C724-4E8A-A751-A57049E4E30E}.Release|x86.ActiveCfg = Release|Win32
 		{23DD662A-C724-4E8A-A751-A57049E4E30E}.Release|x86.Build.0 = Release|Win32
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Debug|x64.ActiveCfg = Debug|x64
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Debug|x64.Build.0 = Debug|x64
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Debug|x86.ActiveCfg = Debug|Win32
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Debug|x86.Build.0 = Debug|Win32
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Release|x64.ActiveCfg = Release|x64
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Release|x64.Build.0 = Release|x64
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Release|x86.ActiveCfg = Release|Win32
+		{77DBC79B-1AC8-49F2-8E9A-2A3D42EF1F26}.Release|x86.Build.0 = Release|Win32
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Debug|x64.ActiveCfg = Debug|x64
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Debug|x64.Build.0 = Debug|x64
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Debug|x86.ActiveCfg = Debug|Win32
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Debug|x86.Build.0 = Debug|Win32
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Release|x64.ActiveCfg = Release|x64
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Release|x64.Build.0 = Release|x64
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Release|x86.ActiveCfg = Release|Win32
+		{ED978585-608D-41E8-AA4E-93CFEC62EE75}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

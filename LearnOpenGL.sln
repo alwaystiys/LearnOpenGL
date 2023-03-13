@@ -43,12 +43,15 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.1.coordinate_system", "sr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.2.cude_3d", "src\01_getting_started\5.2.cude_3d\5.2.cude_3d.vcxproj", "{86E1059C-8CCD-4FBC-A6C8-F5B37CAA93BA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.1.camera_circle", "src\01_getting_started\6.1.camera_circle\6.1.camera_circle.vcxproj", "{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\common_lib\common_lib.vcxitems*{03850800-70df-463b-8579-00155715f18d}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{05d43fa9-83ed-47f3-b032-05319e2f7f7d}*SharedItemsImports = 9
 		src\common_lib\common_lib.vcxitems*{1c6b0cce-f70c-4fb0-819e-f7a6fd0db194}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{23dd662a-c724-4e8a-a751-a57049e4e30e}*SharedItemsImports = 4
+		src\common_lib\common_lib.vcxitems*{2ed7ead4-dcca-4895-9639-f7a93e19f6ff}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{3bc073c6-6cde-45ee-b709-9cf62f8da7f1}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{508e2d13-b70e-45df-9dd6-fc56a0b3275d}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{76aff84e-f587-49cb-808c-3ec455893ed9}*SharedItemsImports = 4
@@ -225,6 +228,14 @@ Global
 		{86E1059C-8CCD-4FBC-A6C8-F5B37CAA93BA}.Release|x64.Build.0 = Release|x64
 		{86E1059C-8CCD-4FBC-A6C8-F5B37CAA93BA}.Release|x86.ActiveCfg = Release|Win32
 		{86E1059C-8CCD-4FBC-A6C8-F5B37CAA93BA}.Release|x86.Build.0 = Release|Win32
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Debug|x64.ActiveCfg = Debug|x64
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Debug|x64.Build.0 = Debug|x64
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Debug|x86.ActiveCfg = Debug|Win32
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Debug|x86.Build.0 = Debug|Win32
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Release|x64.ActiveCfg = Release|x64
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Release|x64.Build.0 = Release|x64
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Release|x86.ActiveCfg = Release|Win32
+		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

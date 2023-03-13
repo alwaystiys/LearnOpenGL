@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.2.texture_triangle_indexe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.3.texture_multi_tex_unit", "src\01_getting_started\3.3.texture_multi_tex_unit\3.3.texture_multi_tex_unit.vcxproj", "{03850800-70DF-463B-8579-00155715F18D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.1.transformations", "src\01_getting_started\4.1.transformations\4.1.transformations.vcxproj", "{76AFF84E-F587-49CB-808C-3EC455893ED9}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\common_lib\common_lib.vcxitems*{03850800-70df-463b-8579-00155715f18d}*SharedItemsImports = 4
@@ -44,6 +46,7 @@ Global
 		src\common_lib\common_lib.vcxitems*{23dd662a-c724-4e8a-a751-a57049e4e30e}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{3bc073c6-6cde-45ee-b709-9cf62f8da7f1}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{508e2d13-b70e-45df-9dd6-fc56a0b3275d}*SharedItemsImports = 4
+		src\common_lib\common_lib.vcxitems*{76aff84e-f587-49cb-808c-3ec455893ed9}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{77dbc79b-1ac8-49f2-8e9a-2a3d42ef1f26}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{784f33e8-1e68-4c55-9a5c-1eb789325a7e}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{9bc496a6-ae8a-4ac4-b5cf-70587c804b87}*SharedItemsImports = 4
@@ -192,6 +195,14 @@ Global
 		{03850800-70DF-463B-8579-00155715F18D}.Release|x64.Build.0 = Release|x64
 		{03850800-70DF-463B-8579-00155715F18D}.Release|x86.ActiveCfg = Release|Win32
 		{03850800-70DF-463B-8579-00155715F18D}.Release|x86.Build.0 = Release|Win32
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Debug|x64.ActiveCfg = Debug|x64
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Debug|x64.Build.0 = Debug|x64
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Debug|x86.ActiveCfg = Debug|Win32
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Debug|x86.Build.0 = Debug|Win32
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Release|x64.ActiveCfg = Release|x64
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Release|x64.Build.0 = Release|x64
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Release|x86.ActiveCfg = Release|Win32
+		{76AFF84E-F587-49CB-808C-3EC455893ED9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

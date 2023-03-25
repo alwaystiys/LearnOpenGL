@@ -45,8 +45,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.2.cude_3d", "src\01_getti
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.1.camera_circle", "src\01_getting_started\6.1.camera_circle\6.1.camera_circle.vcxproj", "{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "6.2.camera_control", "src\01_getting_started\6.2.camera_control\6.2.camera_control.vcxproj", "{0076C2B3-7731-4AB7-8B91-6374DB1BA268}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\common_lib\common_lib.vcxitems*{0076c2b3-7731-4ab7-8b91-6374db1ba268}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{03850800-70df-463b-8579-00155715f18d}*SharedItemsImports = 4
 		src\common_lib\common_lib.vcxitems*{05d43fa9-83ed-47f3-b032-05319e2f7f7d}*SharedItemsImports = 9
 		src\common_lib\common_lib.vcxitems*{1c6b0cce-f70c-4fb0-819e-f7a6fd0db194}*SharedItemsImports = 4
@@ -236,6 +239,14 @@ Global
 		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Release|x64.Build.0 = Release|x64
 		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Release|x86.ActiveCfg = Release|Win32
 		{2ED7EAD4-DCCA-4895-9639-F7A93E19F6FF}.Release|x86.Build.0 = Release|Win32
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Debug|x64.ActiveCfg = Debug|x64
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Debug|x64.Build.0 = Debug|x64
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Debug|x86.ActiveCfg = Debug|Win32
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Debug|x86.Build.0 = Debug|Win32
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Release|x64.ActiveCfg = Release|x64
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Release|x64.Build.0 = Release|x64
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Release|x86.ActiveCfg = Release|Win32
+		{0076C2B3-7731-4AB7-8B91-6374DB1BA268}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

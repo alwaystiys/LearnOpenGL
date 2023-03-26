@@ -75,27 +75,29 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>$(SolutionDir)/lib/lib-vc2019-x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
-    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(SolutionDir)/include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
     <LibraryPath>$(SolutionDir)/lib/lib-vc2019-x86;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
-    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)/include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)/lib/lib-vc2019-x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(SolutionDir)/include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)/lib/lib-vc2019-x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

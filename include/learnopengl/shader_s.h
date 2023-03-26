@@ -89,8 +89,11 @@ public:
 	}
 	void setMatrix4fv(const std::string& name, GLfloat* value) const
 	{
-		GLuint transformLoc = glGetUniformLocation(ID, name.c_str());
-		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, value);
+		glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, value);
+	}
+	void setVec3(const std::string& name, GLfloat r, GLfloat g, GLfloat b) const
+	{
+		glUniform3f(glGetUniformLocation(ID, name.c_str()), r, g, b);
 	}
 private:
 	const std::string PATH_PREFIX = "../../../res/shaders/";
